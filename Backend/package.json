@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/plapers2/Portafolio_React#readme",
+  "bugs": {
+    "url": "https://github.com/plapers2/Portafolio_React/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plapers2/Portafolio_React.git"
+  },
+  "license": "ISC",
+  "author": "Mateo Hoyos",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.1",
+    "nodemon": "^3.1.14"
+  }
+}
