@@ -50,7 +50,7 @@ const AboutMe = () => {
           <h2 className="text-xl m-6 font-bold">02 - Tecnologias Principales</h2>
         </div>
         <div className="basis-3/4 p-5">
-          <div className="flex flex-wrap justify-evenly">
+          <div className="flex flex-wrap justify-evenly overflow-x-hidden">
             {Datos.map((skill) => {
               if (
                 skill.technology === "Express" ||
@@ -59,7 +59,7 @@ const AboutMe = () => {
                 skill.technology === "GitHub"
               ) {
                 return (
-                  <div className="flex mt-2">
+                  <div className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
                     <div key={skill.id} className="card bg-base-100 image-full w-60 mr-2 shadow-sm h-full">
                       <figure>
                         <img src={skill.icon} alt={skill.technology} />
@@ -84,9 +84,9 @@ const AboutMe = () => {
         <div className="basis-1/4">
           <h2 className="text-xl m-6 font-bold">03 - Filosofia de Desarrollo</h2>
         </div>
-        <div className="basis-3/4 p-5">
+        <div className="basis-3/4 p-5 overflow-x-hidden">
           <div className="flex flex-wrap justify-evenly">
-            <div className="flex mt-2">
+            <div className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
               <div className="card bg-base-100 w-96 shadow-sm">
                 <figure className="justify-start w-1/4 mt-3 ml-3">
                   <span className="rounded-xl p-4 text-green-500/80">
@@ -115,7 +115,7 @@ const AboutMe = () => {
                 </div>
               </div>
             </div>
-            <div className="flex mt-2">
+            <div className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
               <div className="card bg-base-100 w-96 shadow-sm">
                 <figure className="justify-start w-1/4 mt-3 ml-3">
                   <span className="rounded-xl p-4 text-green-500/80">
@@ -144,7 +144,7 @@ const AboutMe = () => {
                 </div>
               </div>
             </div>
-            <div className="flex mt-2">
+            <div className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
               <div className="card bg-base-100 w-96 shadow-sm">
                 <figure className="justify-start w-1/4 mt-3 ml-3">
                   <span className="rounded-xl p-4 text-green-500/80">
