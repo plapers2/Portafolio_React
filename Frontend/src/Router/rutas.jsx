@@ -3,7 +3,7 @@ import Header from "../components/layouts/Header";
 import Footer from "../components/layouts/Footer";
 import Projects from "../components/pages/Projects";
 import Skills from "../components/pages/Skills";
-import About from "../components/pages/About";
+import AboutMe from "../components/pages/AboutMe";
 import Home from "../components/pages/Home";
 import backgroundImg from "../assets/background_home.png";
 const Rutas = () => {
@@ -19,7 +19,7 @@ const Rutas = () => {
                   <Route path="/" element={<Home />}></Route>
                   <Route path="/projects" element={<Projects />}></Route>
                   <Route path="/skills" element={<Skills />}></Route>
-                  <Route path="/about" element={<About />}></Route>
+                  <Route path="/about" element={<AboutMe />}></Route>
                 </Routes>
               </article>
             </section>

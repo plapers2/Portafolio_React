@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import prueba from "../../assets/imagen_referencia.jpeg";
 import useFetchApi from "../../hooks/useFetchApi";
-const About = () => {
+const AboutMe = () => {
   const { Datos } = useFetchApi("https://portafolio-react-y0p9.onrender.com/api/skills");
   return (
     <>
@@ -180,4 +180,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutMe;
