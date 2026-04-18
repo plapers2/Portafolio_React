@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import useFetchApi from "../../hooks/useFetchApi";
 const Skills = () => {
   const { Datos } = useFetchApi("https://portafolio-react-y0p9.onrender.com/api/skills");
-  console.log(Datos);
   return (
     <>
       <section className="mt-20 mb-20 pl-10 flex flex-row">

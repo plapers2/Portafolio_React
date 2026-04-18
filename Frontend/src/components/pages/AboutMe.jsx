@@ -59,8 +59,11 @@ const AboutMe = () => {
                 skill.technology === "GitHub"
               ) {
                 return (
-                  <div className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
-                    <div key={skill.id} className="card bg-base-100 image-full w-60 mr-2 shadow-sm h-full">
+                  <div
+                    key={skill.id}
+                    className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3"
+                  >
+                    <div className="card bg-base-100 image-full w-60 mr-2 shadow-sm h-full">
                       <figure>
                         <img src={skill.icon} alt={skill.technology} />
                       </figure>
