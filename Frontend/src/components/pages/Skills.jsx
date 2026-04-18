@@ -30,9 +30,9 @@ const Skills = () => {
               </div>
               {/* Informacion sobre tecnologia */}
               <div className="basis-3/4 p-5">
-                <p className="p-3 text-xl md:text-2xl xl:text-4xl">{skill.description}</p>
+                <p className="w-9/10 p-3 text-xl md:text-2xl xl:text-4xl">{skill.description}</p>
                 <div className="flex row-auto mt-10">
-                  <p className="w-full p-3 text-sm md:text-xl xl:text-2xl">{skill.long_description}</p>
+                  <p className="w-9/10 p-3 text-sm md:text-xl xl:text-2xl">{skill.long_description}</p>
                 </div>
               </div>
             </div>
