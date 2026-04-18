@@ -22,6 +22,11 @@ const Home = () => {
             </NavLink>
           </div>
           <div>
+            <NavLink to="/skills" className="text-green-500 mt-4 inline-block">
+              Leer más sobre mis habilidades →
+            </NavLink>
+          </div>
+          <div>
             <NavLink to="/projects" className="mt-6 inline-block bg-green-500 px-6 py-2 rounded-lg">
               Ver proyectos
             </NavLink>
