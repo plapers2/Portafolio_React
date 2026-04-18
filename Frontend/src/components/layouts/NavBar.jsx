@@ -13,13 +13,13 @@ const NavBar = () => {
             </div>
             <ul tabIndex="-1" className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               <li>
-                <NavLink to="/contact"></NavLink>
+                <NavLink to="/">Inicio</NavLink>
               </li>
               <li>
-                <NavLink to="/projects"></NavLink>
+                <NavLink to="/projects">Proyectos</NavLink>
               </li>
               <li>
-                <NavLink to="/skills"></NavLink>
+                <NavLink to="/skills">Habilidades</NavLink>
               </li>
             </ul>
           </div>
@@ -27,7 +27,7 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex justify-center w-full">
           <ul className="menu menu-horizontal px-1 text-xl">
             <li>
-              <NavLink to="/contact">Contacto</NavLink>
+              <NavLink to="/">Inicio</NavLink>
             </li>
             <li>
               <NavLink to="/projects">Proyectos</NavLink>

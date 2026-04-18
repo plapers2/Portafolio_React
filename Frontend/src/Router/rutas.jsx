@@ -6,6 +6,13 @@ const Rutas = () => {
     <>
       <BrowserRouter>
         <Header />
+        <section className="flex flex-wrap flex-row h-auto p-2">
+          <article className="flex flex-row flex-wrap justify-evenly">
+            {/* <Projects /> */}
+            {/* <Skills /> */}
+          </article>
+        </section>
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );
