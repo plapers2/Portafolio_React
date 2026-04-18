@@ -1,22 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
 import linkedinIcon from "../../assets/linkedin_icon.png";
 import gitHubIcon from "../../assets/github_icon.png";
 import whatsAppIcon from "../../assets/whatsapp_icon.png";
+import useFetchApi from "../../hooks/useFetchApi";
 const Footer = () => {
-  const [contacts, setContact] = useState([]);
-
-  async function consumirApi() {
-    const url = "https://portafolio-react-y0p9.onrender.com/api/contacts";
-    const peticion = await fetch(url, { method: "GET" });
-    const datos = await peticion.json();
-    if (datos.Status === "success") {
-      setContact(datos.results);
-    }
-  }
-  useEffect(() => {
-    consumirApi();
-  }, []);
+  const { Datos } = useFetchApi("https://portafolio-react-y0p9.onrender.com/api/contacts");
 
   return (
     <>
@@ -25,10 +13,11 @@ const Footer = () => {
           <NavLink to="/">Inicio</NavLink>
           <NavLink to="/projects">Proyectos</NavLink>
           <NavLink to="/skills">Habilidades</NavLink>
+          <NavLink to="/about">Sobre Mí</NavLink>
         </nav>
         <nav>
           <h1 className="mb-4">Contactame:</h1>
-          {contacts.map((Contact) => {
+          {Datos.map((Contact) => {
             return (
               <div key={Contact.id} className="grid grid-flow-col gap-4">
                 <a href={Contact.linkedin}>

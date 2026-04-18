@@ -1,15 +1,18 @@
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/logo_pag.png";
 import NavBar from "./NavBar";
 
 const Header = () => {
   return (
     <>
-      <header className="flex flex-row flex-wrap">
-        <div className="flex flex-row flex-wrap bg-base-300 text-white p-7 shadow-2xs basis-2/4 items-center">
-          <img src={logo} alt="Logo" />
-          <p className="ml-2 text-xs md:text-xl xl:text-2xl text-shadow-2xs">Mateo Hoyos Desarrollador Full-Stack</p>
+      <header className="lg:px-16 px-4 flex flex-wrap items-center py-4 shadow-lg bg-black/60">
+        <div className="flex-1 flex justify-between items-center">
+          <a href="#" className="text-3xl font-semibold font-serif text-green-400">
+            <img src={logo} alt="" className="w-60 h-25" />
+          </a>
         </div>
-        <NavBar />
+        <div className="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+          <NavBar />
+        </div>
       </header>
     </>
   );
