@@ -17,7 +17,7 @@ const AboutMe = () => {
           <img src={prueba} alt="Imagen representativa" className="rounded-2xl" />
         </div>
       </section>
-      <section className="w-full flex bg-gray-900/80">
+      <section className="w-full flex bg-black/60">
         <div className="basis-1/4">
           <h2 className="text-xl m-6 font-bold">01 - Sobre Mí</h2>
         </div>
@@ -45,7 +45,7 @@ const AboutMe = () => {
           </div>
         </div>
       </section>
-      <section className="w-full flex bg-gray-900/80 mt-2">
+      <section className="w-full flex bg-black/60 mt-2">
         <div className="basis-1/4">
           <h2 className="text-xl m-6 font-bold">02 - Tecnologias Principales</h2>
         </div>
@@ -80,7 +80,7 @@ const AboutMe = () => {
           </NavLink>
         </div>
       </section>
-      <section className="w-full flex bg-gray-900/80 mt-2">
+      <section className="w-full flex bg-black/60 mt-2">
         <div className="basis-1/4">
           <h2 className="text-xl m-6 font-bold">03 - Filosofia de Desarrollo</h2>
         </div>
