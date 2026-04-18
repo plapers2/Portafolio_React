@@ -10,20 +10,27 @@ const Rutas = () => {
   return (
     <>
       <BrowserRouter>
-        <div className="w-full h-full bg-black">
-          <div className="w-full h-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${backgroundImg})` }}>
-            <Header />
-            <section className="flex flex-wrap flex-row h-auto p-2">
-              <article className="flex flex-row flex-wrap justify-evenly w-full h-full">
+        <div className="w-full bg-black">
+          <div
+            className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
+            style={{ backgroundImage: `url(${backgroundImg})` }}
+          >
+            <div className="absolute inset-0 bg-black/50"></div>
+
+            <div className="relative z-10">
+              <Header />
+
+              <main className="p-2">
                 <Routes>
-                  <Route path="/" element={<Home />}></Route>
-                  <Route path="/projects" element={<Projects />}></Route>
-                  <Route path="/skills" element={<Skills />}></Route>
-                  <Route path="/about" element={<AboutMe />}></Route>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/skills" element={<Skills />} />
+                  <Route path="/about" element={<AboutMe />} />
                 </Routes>
-              </article>
-            </section>
+              </main>
+            </div>
           </div>
+
           <Footer />
         </div>
       </BrowserRouter>
