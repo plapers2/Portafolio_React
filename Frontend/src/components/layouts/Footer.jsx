@@ -104,19 +104,25 @@ const Footer = () => {
             {Datos.map((Contact) => {
               return (
                 <div key={Contact.id} className="grid grid-flow-col gap-4">
-                  <a href={Contact.linkedin}>
-                    <img className="w-17 h-12 object-cover rounded-xl" src={linkedinIcon} alt="" />
+                  <a
+                    href={Contact.linkedin}
+                    className="transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3"
+                  >
+                    <img className="w-17 h-12 object-cover rounded-lg" src={linkedinIcon} alt="" />
                   </a>
 
-                  <a href={Contact.whatsapp}>
-                    <img className="w-17 h-12 object-cover rounded-xl" src={whatsAppIcon} alt="" />
+                  <a
+                    href={Contact.whatsapp}
+                    className="transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3"
+                  >
+                    <img className="w-17 h-12 object-cover rounded-lg" src={whatsAppIcon} alt="" />
                   </a>
 
-                  <a href={Contact.github}>
-                    <img className="w-17 h-12 object-cover rounded-xl" src={gitHubIcon} alt="" />
+                  <a href={Contact.github} className="transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
+                    <img className="w-17 h-12 object-cover rounded-lg" src={gitHubIcon} alt="" />
                   </a>
-                  <a href={Contact.email}>
-                    <img className="w-17 h-12 object-cover rounded-xl" src={emailIcon} alt="" />
+                  <a href={Contact.email} className="transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
+                    <img className="w-17 h-12 object-cover rounded-lg" src={emailIcon} alt="" />
                   </a>
                 </div>
               );
