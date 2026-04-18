@@ -6,7 +6,7 @@ export const getSkill = async (req, res) => {
     res.json({ Status: "success", results });
   } catch (error) {
     res.status(500).json({
-      error: "error al listar skills",
+      error: "error al listar skills" + error,
     });
   }
 };

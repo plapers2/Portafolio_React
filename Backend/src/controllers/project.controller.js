@@ -6,7 +6,7 @@ export const getProject = async (req, res) => {
     res.json({ Status: "success", results });
   } catch (error) {
     res.status(500).json({
-      error: "error al listar proyectos",
+      error: "error al listar proyectos" + error,
     });
   }
 };

@@ -6,7 +6,7 @@ export const getContact = async (req, res) => {
     res.json({ Status: "success", results });
   } catch (error) {
     res.status(500).json({
-      error: "error al listar contacto",
+      error: "error al listar contacto" + error,
     });
   }
 };
