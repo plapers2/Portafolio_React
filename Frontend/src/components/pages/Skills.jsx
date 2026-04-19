@@ -17,32 +17,24 @@ const Skills = () => {
           </div>
         </div>
       </section>
-      {Datos.map((skill) => {
-        return (
-          <section className="w-full flex bg-black/60 m-2 overflow-x-hidden" key={skill.id}>
-            <div className="flex transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
-              {/* Imagenes */}
-              <div className="basis-1/4 flex flex-col justify-center">
-                <div className="justify-center flex">
-                  <h2 className="text-xl m-6 font-bold">
-                    0{skill.id} - {skill.technology}
-                  </h2>
-                </div>
-                <div className="justify-center flex h-30">
-                  <img src={skill.icon} alt={skill.technology} className="h-full rounded-2xl" />
-                </div>
-              </div>
-              {/* Informacion sobre tecnologia */}
-              <div className="basis-3/4 p-5">
-                <p className="w-9/10 p-3 text-xl md:text-2xl xl:text-4xl">{skill.description}</p>
-                <div className="flex row-auto mt-10">
-                  <p className="w-9/10 p-3 text-sm md:text-xl xl:text-2xl">{skill.long_description}</p>
+      <section className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 bg-black/60 p-4 auto-rows-fr">
+        {Datos.map((skill) => {
+          return (
+            <div key={skill.id} className="flex transition-all duration-300 hover:-translate-y-2 hover:scale-105 h-full">
+              <div className="card sm:card-side bg-base-100 shadow-sm w-full overflow-hidden justify-center flex items-center">
+                <figure className="p-4 flex items-center justify-center w-auto sm:w-lg lg:w-xl h-50 ">
+                  <img src={skill.icon} alt="tech" className="w-full h-full object-contain" />
+                </figure>
+
+                <div className="card-body">
+                  <h2 className="card-title">{skill.technology}</h2>
+                  <p className="xl:text-lg">{skill.description}</p>
                 </div>
               </div>
             </div>
-          </section>
-        );
-      })}
+          );
+        })}
+      </section>
     </>
   );
 };
