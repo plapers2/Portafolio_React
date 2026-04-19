@@ -17,10 +17,9 @@ const Projects = () => {
         </div>
       </section>
       <section className="w-full px-6 py-20 bg-black/60 text-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {Datos.map((project, i) => (
-            <div key={i} className="group bg-neutral-900 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
-              {/* Image */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+          {Datos.map((project) => (
+            <div key={project.id} className="group bg-neutral-900 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
               <div className="h-64 overflow-hidden">
                 <img
                   src={project.image}
@@ -28,9 +27,7 @@ const Projects = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                 />
               </div>
-              {/* Content */}
               <div className="p-6">
-                {/* Tags */}
                 <div className="flex gap-2 mb-4 flex-wrap">
                   {project.tags.map((tag) => (
                     <span key={tag.id} className="text-xs px-3 py-1 bg-indigo-600/20 text-indigo-300 rounded-2xl">
@@ -38,10 +35,8 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                {/* Title */}
-                <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-                {/* Description */}
-                <p className="text-sm text-gray-400">{project.description}</p>
+                <h3 className="text-xl lg:text-2xl font-semibold mb-2">{project.name}</h3>
+                <p className="text-sm lg:text-lg xl:text-xl text-gray-400">{project.description}</p>
                 <a href={project.link} className="text-green-500 mt-4 inline-block">
                   Ver más →
                 </a>
