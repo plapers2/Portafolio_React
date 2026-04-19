@@ -9,9 +9,9 @@ const Skills = () => {
           <div>
             <h2 className="text-5xl md:text-7xl leading-none">
               <span className="text-white">Mis</span>{" "}
-              <span className="text-red-400 italic relative">
+              <span className="text-green-500 italic relative">
                 Habilidades
-                <span className="absolute left-0 -bottom-2 w-full h-0.75 bg-red-400/50"></span>
+                <span className="absolute left-0 -bottom-2 w-full h-0.75 bg-green-500/50"></span>
               </span>
             </h2>
           </div>
