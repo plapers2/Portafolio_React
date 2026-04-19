@@ -4,13 +4,13 @@ import NavBar from "./NavBar";
 const Header = () => {
   return (
     <>
-      <header className="lg:px-16 px-4 flex flex-wrap items-center py-4 shadow-lg bg-black/60">
-        <div className="flex-1 flex justify-between items-center">
-          <a href="#" className="text-3xl font-semibold font-serif text-green-400">
-            <img src={logo} alt="" className="w-60 h-25" />
+      <header className="lg:px-16 px-4 grid grid-cols-1 sm:grid-cols-3 items-center py-4 shadow-lg bg-black/60">
+        <div className="flex justify-center items-center sm:col-span-1">
+          <a href="#" className="w-5/10">
+            <img src={logo} alt="" className="w-full h-full" />
           </a>
         </div>
-        <div className="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+        <div id="menu" className="sm:col-span-2 sm:justify-end sm:flex">
           <NavBar />
         </div>
       </header>
