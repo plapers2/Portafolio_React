@@ -5,11 +5,17 @@ const Skills = () => {
   return (
     <>
       <section className="mt-20 mb-20 pl-10 flex flex-row">
-        <div className="basis-3/4">
-          <h1 className="text-2xl md:text-4xl xl:text-6xl">
-            <span className="text-green-500 font-serif">Arquitectura,</span> <br />
-            <span className="font-bold font-mono">Código</span> y <span className="text-red-400">Estrategia.</span>
-          </h1>
+        <div className="flex justify-between items-end mb-16">
+          <div>
+            <p className="text-green-500 uppercase tracking-widest text-sm mb-2">Portfolio</p>
+            <h2 className="text-5xl md:text-7xl leading-none">
+              <span className="text-white">Mis</span>{" "}
+              <span className="text-red-400 italic relative">
+                Habilidades
+                <span className="absolute left-0 -bottom-2 w-full h-0.75 bg-red-400/50"></span>
+              </span>
+            </h2>
+          </div>
         </div>
       </section>
       {Datos.map((skill) => {

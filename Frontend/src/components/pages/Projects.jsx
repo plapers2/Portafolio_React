@@ -3,12 +3,11 @@ const Projects = () => {
   const { Datos } = useFetchApi("https://portafolio-react-y0p9.onrender.com/api/projects");
   return (
     <>
-      <section className="w-full px-6 py-20 bg-black/60 text-white">
-        {/* Header */}
+      <section className="mt-20 mb-20 pl-10 flex flex-row">
         <div className="flex justify-between items-end mb-16">
           <div>
             <p className="text-green-500 uppercase tracking-widest text-sm mb-2">Portfolio</p>
-            <h2 className="text-5xl md:text-7xl font-black leading-none">
+            <h2 className="text-5xl md:text-7xl leading-none">
               <span className="text-white">Proyectos</span>{" "}
               <span className="text-red-400 italic relative">
                 Realizados
@@ -17,7 +16,8 @@ const Projects = () => {
             </h2>
           </div>
         </div>
-        {/* Grid */}
+      </section>
+      <section className="w-full px-6 py-20 bg-black/60 text-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {Datos.map((project, i) => (
             <div key={i} className="group bg-neutral-900 rounded-2xl overflow-hidden hover:scale-[1.02] transition">
