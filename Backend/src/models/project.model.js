@@ -33,4 +33,9 @@ export const projectModel = {
     });
     return Object.values(rowMap);
   },
+  update: async function (id, datos) {
+    const sql = "UPDATE projects SET ? WHERE id = ?";
+    const [rows] = await cnx.query(sql, [datos, id]);
+    return rows;
+  },
 };
