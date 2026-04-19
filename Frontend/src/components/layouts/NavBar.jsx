@@ -9,6 +9,12 @@ const NavBar = () => {
         </li>
 
         <li>
+          <a href="#about" className="hover:text-green-500">
+            Sobre mí
+          </a>
+        </li>
+        
+        <li>
           <a href="#skills" className="hover:text-green-500">
             Habilidades
           </a>
@@ -20,11 +26,6 @@ const NavBar = () => {
           </a>
         </li>
 
-        <li>
-          <a href="#about" className="hover:text-green-500">
-            Sobre mí
-          </a>
-        </li>
       </ul>
     </nav>
   );
