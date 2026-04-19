@@ -1,14 +1,13 @@
-import { NavLink } from "react-router-dom";
 import useFetchApi from "../../hooks/useFetchApi";
 const AboutMe = () => {
   const { Datos } = useFetchApi("https://portafolio-react-y0p9.onrender.com/api/skills");
   return (
     <>
-      <section className="w-full flex bg-black/60" id="about">
-        <div className="basis-1/4">
-          <h2 className="text-xl m-6 font-bold">01 - Sobre Mí</h2>
+      <section className="bg-black/60 grid grid-cols-1 lg:grid-cols-4" id="about">
+        <div className="lg:col-span-1">
+          <h2 className="text-xl lg:text-2xl m-6 font-bold">01 - Sobre Mí</h2>
         </div>
-        <div className="basis-3/4 p-5">
+        <div className="lg:col-span-3 p-5">
           <p className="p-3 text-xl md:text-2xl xl:text-4xl">
             Mi camino comenzó con una obsesión por la <span className="text-green-500 font-serif">estructura interna</span> de las cosas. No
             se trataba solo de cómo funcionaban, sino de por qué lo hacían de esa manera.
@@ -32,12 +31,12 @@ const AboutMe = () => {
           </div>
         </div>
       </section>
-      <section className="w-full flex bg-black/60 mt-2">
-        <div className="basis-1/4">
-          <h2 className="text-xl m-6 font-bold">02 - Tecnologias Principales</h2>
+      <section className="w-full grid grid-cols-1 lg:grid-cols-4 bg-black/60 mt-2">
+        <div className="lg:col-span-1">
+          <h2 className="text-xl lg:text-2xl m-6 font-bold">02 - Tecnologias Principales</h2>
         </div>
-        <div className="basis-3/4 p-5">
-          <div className="flex flex-wrap justify-evenly overflow-x-hidden">
+        <div className="lg:col-span-3 p-5">
+          <div className="grid grid-cols-1  sm:grid-cols-2 xl:grid-cols-4">
             {Datos.map((skill) => {
               if (
                 skill.technology === "Express" ||
@@ -46,17 +45,14 @@ const AboutMe = () => {
                 skill.technology === "GitHub"
               ) {
                 return (
-                  <div
-                    key={skill.id}
-                    className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3"
-                  >
-                    <div className="card bg-black image-full w-40 h-40 lg:w-60 mr-2 shadow-sm lg:h-full">
+                  <div key={skill.id} className="transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
+                    <div className="card bg-black h-full image-full lg:w-60 mr-2 shadow-sm">
                       <figure>
                         <img src={skill.icon} alt={skill.technology} />
                       </figure>
                       <div className="card-body bg-black/60">
-                        <h2 className="card-title text-3xl">{skill.technology}</h2>
-                        <p className="text-lg">{skill.description}</p>
+                        <h2 className="card-title text-xl lg:text-2xl">{skill.technology}</h2>
+                        <p className="text-md sm:text-xl">{skill.description}</p>
                         <div className="card-actions justify-end"></div>
                       </div>
                     </div>
@@ -65,19 +61,19 @@ const AboutMe = () => {
               }
             })}
           </div>
-          <NavLink to="/skills" className="text-green-500 mt-4 justify-center flex">
+          <a href="#skills" className="text-green-500 mt-4 justify-center flex text-sm md:text-lg">
             Conoce todas mis habilidades →
-          </NavLink>
+          </a>
         </div>
       </section>
-      <section className="w-full flex bg-black/60 mt-2">
-        <div className="basis-1/4">
-          <h2 className="text-xl m-6 font-bold">03 - Filosofia de Desarrollo</h2>
+      <section className="w-full bg-black/60 mt-2 grid grid-cols-1 lg:grid-cols-4">
+        <div className="lg:col-span-1">
+          <h2 className="text-xl lg:text-2xl m-6 font-bold">03 - Filosofia de Desarrollo</h2>
         </div>
-        <div className="basis-3/4 p-5 overflow-x-hidden">
-          <div className="flex flex-wrap justify-evenly">
+        <div className="lg:col-span-3 p-5">
+          <div className="grid grid-cols-1 xl:grid-cols-3">
             <div className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
-              <div className="card bg-base-100 w-96 shadow-sm">
+              <div className="card bg-base-100 w-full shadow-sm">
                 <figure className="justify-start w-1/4 mt-3 ml-3">
                   <span className="rounded-xl p-4 text-green-500/80">
                     <svg
@@ -97,8 +93,8 @@ const AboutMe = () => {
                   </span>
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title tracking-widest uppercase text-2xl">Escalabilidad</h2>
-                  <p className="text-lg">
+                  <h2 className="card-title tracking-widest uppercase text-xl lg:text-2xl">Escalabilidad</h2>
+                  <p className="text-md sm:text-xl">
                     Arquitecturas diseñadas para crecer. Implementación de microservicios y patrones de diseño que aseguran que el sistema
                     soporte el éxito del negocio sin colapsar.
                   </p>
@@ -106,7 +102,7 @@ const AboutMe = () => {
               </div>
             </div>
             <div className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
-              <div className="card bg-base-100 w-96 shadow-sm">
+              <div className="card bg-base-100 w-full shadow-sm">
                 <figure className="justify-start w-1/4 mt-3 ml-3">
                   <span className="rounded-xl p-4 text-green-500/80">
                     <svg
@@ -126,8 +122,8 @@ const AboutMe = () => {
                   </span>
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title tracking-widest uppercase text-2xl">Código Limpio</h2>
-                  <p className="text-lg">
+                  <h2 className="card-title tracking-widest uppercase text-xl lg:text-2xl">Código Limpio</h2>
+                  <p className="text-md sm:text-xl">
                     Escribo código para humanos, no para máquinas. Principios SOLID, DRY y una obsesión por la legibilidad que reduce la
                     deuda técnica desde el día uno.
                   </p>
@@ -135,7 +131,7 @@ const AboutMe = () => {
               </div>
             </div>
             <div className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3">
-              <div className="card bg-base-100 w-96 shadow-sm">
+              <div className="card bg-base-100 w-full shadow-sm">
                 <figure className="justify-start w-1/4 mt-3 ml-3">
                   <span className="rounded-xl p-4 text-green-500/80">
                     <svg
@@ -155,8 +151,8 @@ const AboutMe = () => {
                   </span>
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title tracking-widest uppercase text-2xl">User-Centric</h2>
-                  <p className="text-lg">
+                  <h2 className="card-title tracking-widest uppercase text-xl lg:text-2xl">User-Centric</h2>
+                  <p className="text-md sm:text-xl">
                     La tecnología es un medio, no un fin. Cada decisión técnica está supeditada a mejorar la vida del usuario y resolver sus
                     problemas reales de forma intuitiva.
                   </p>
