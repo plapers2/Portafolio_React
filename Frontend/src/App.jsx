@@ -1,5 +1,5 @@
 import "./App.css";
-import Rutas from "./Router/Rutas";
+import Rutas from "./router/Rutas";
 function App() {
   return (
     <>
