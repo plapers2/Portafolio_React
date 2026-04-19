@@ -27,7 +27,7 @@ const Skills = () => {
                 </figure>
 
                 <div className="card-body">
-                  <h2 className="card-title">{skill.technology}</h2>
+                  <h2 className="card-title text-xl lg:text-2xl">{skill.technology}</h2>
                   <p className="xl:text-lg">{skill.description}</p>
                 </div>
               </div>
