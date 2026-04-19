@@ -4,10 +4,9 @@ const Skills = () => {
   const { Datos } = useFetchApi("https://portafolio-react-y0p9.onrender.com/api/skills");
   return (
     <>
-      <section className="mt-20 mb-20 pl-10 flex flex-row">
+      <section className="mt-20 mb-20 pl-10 flex flex-row" id="skills">
         <div className="flex justify-between items-end mb-16">
           <div>
-            <p className="text-green-500 uppercase tracking-widest text-sm mb-2">Portfolio</p>
             <h2 className="text-5xl md:text-7xl leading-none">
               <span className="text-white">Mis</span>{" "}
               <span className="text-red-400 italic relative">

@@ -1,23 +1,10 @@
 import { NavLink } from "react-router-dom";
-import prueba from "../../assets/imagen_referencia.jpeg";
 import useFetchApi from "../../hooks/useFetchApi";
 const AboutMe = () => {
   const { Datos } = useFetchApi("https://portafolio-react-y0p9.onrender.com/api/skills");
   return (
     <>
-      <section className="mt-20 mb-20 pl-10 flex flex-row">
-        <div className="basis-3/4">
-          <h1 className="text-2xl md:text-4xl xl:text-6xl">
-            <span className="text-green-500 font-serif">Arquitectura,</span> <br />
-            <span className="font-bold font-mono">Código</span> y <span className="text-red-400">Estrategia.</span>
-          </h1>
-        </div>
-
-        <div className="basis-1/4">
-          <img src={prueba} alt="Imagen representativa" className="rounded-2xl" />
-        </div>
-      </section>
-      <section className="w-full flex bg-black/60">
+      <section className="w-full flex bg-black/60" id="about">
         <div className="basis-1/4">
           <h2 className="text-xl m-6 font-bold">01 - Sobre Mí</h2>
         </div>
@@ -50,7 +37,7 @@ const AboutMe = () => {
           <h2 className="text-xl m-6 font-bold">02 - Tecnologias Principales</h2>
         </div>
         <div className="basis-3/4 p-5">
-          <div className="flex flex-wrap justify-evenly overflow-x-hidden w-auto">
+          <div className="flex flex-wrap justify-evenly overflow-x-hidden">
             {Datos.map((skill) => {
               if (
                 skill.technology === "Express" ||
@@ -63,11 +50,11 @@ const AboutMe = () => {
                     key={skill.id}
                     className="flex mt-2 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-xl p-3"
                   >
-                    <div className="card bg-base-100 image-full w-60 mr-2 shadow-sm h-full">
+                    <div className="card bg-black image-full w-40 h-40 lg:w-60 mr-2 shadow-sm lg:h-full">
                       <figure>
                         <img src={skill.icon} alt={skill.technology} />
                       </figure>
-                      <div className="card-body">
+                      <div className="card-body bg-black/60">
                         <h2 className="card-title text-3xl">{skill.technology}</h2>
                         <p className="text-lg">{skill.description}</p>
                         <div className="card-actions justify-end"></div>

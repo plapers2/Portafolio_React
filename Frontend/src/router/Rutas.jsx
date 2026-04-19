@@ -19,14 +19,11 @@ const Rutas = () => {
 
             <div className="relative z-10">
               <Header />
-
               <main className="p-2">
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/skills" element={<Skills />} />
-                  <Route path="/about" element={<AboutMe />} />
-                </Routes>
+                <Home />
+                <AboutMe />
+                <Skills />
+                <Projects />
               </main>
             </div>
           </div>
