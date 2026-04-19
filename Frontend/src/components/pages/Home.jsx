@@ -1,5 +1,5 @@
 import Hero from "../layouts/Hero";
-import prueba from "../../assets/imagen_referencia.jpeg";
+import prueba from "../../assets/mi_foto.jpeg";
 const Home = () => {
   return (
     <>
