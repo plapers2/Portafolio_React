@@ -10,3 +10,13 @@ export const getContact = async (req, res) => {
     });
   }
 };
+export const putContact = async (req, res) => {
+  try {
+    const results = await contactModel.update(req.params.id, req.body);
+    res.json({ Status: "success", results });
+  } catch (error) {
+    res.status(500).json({
+      error: "error al actualizar contacto" + error,
+    });
+  }
+};
