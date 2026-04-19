@@ -1,40 +1,29 @@
-import { NavLink } from "react-router-dom";
-
 const NavBar = () => {
   return (
     <nav>
-      <ul className="md:flex items-center justify-between text-base text-white pt-4 md:pt-0">
+      <ul className="md:flex items-center justify-between text-base text-white pt-4 md:pt-0 gap-10">
         <li>
-          <NavLink to="/" className={({ isActive }) => `md:p-4 py-3 px-0 block ${isActive ? "text-green-500" : "hover:text-green-500"}`}>
+          <a href="#" className="hover:text-green-500">
             Inicio
-          </NavLink>
+          </a>
         </li>
 
         <li>
-          <NavLink
-            to="/skills"
-            className={({ isActive }) => `md:p-4 py-3 px-0 block ${isActive ? "text-green-500" : "hover:text-green-500"}`}
-          >
+          <a href="#skills" className="hover:text-green-500">
             Habilidades
-          </NavLink>
+          </a>
         </li>
 
         <li>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) => `md:p-4 py-3 px-0 block ${isActive ? "text-green-500" : "hover:text-green-500"}`}
-          >
+          <a href="#projects" className="hover:text-green-500">
             Proyectos
-          </NavLink>
+          </a>
         </li>
 
         <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => `md:p-4 py-3 px-0 block ${isActive ? "text-green-500" : "hover:text-green-500"}`}
-          >
+          <a href="#about" className="hover:text-green-500">
             Sobre mí
-          </NavLink>
+          </a>
         </li>
       </ul>
     </nav>
