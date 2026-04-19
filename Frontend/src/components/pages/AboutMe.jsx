@@ -50,7 +50,7 @@ const AboutMe = () => {
           <h2 className="text-xl m-6 font-bold">02 - Tecnologias Principales</h2>
         </div>
         <div className="basis-3/4 p-5">
-          <div className="flex flex-wrap justify-evenly overflow-x-hidden">
+          <div className="flex flex-wrap justify-evenly overflow-x-hidden w-auto">
             {Datos.map((skill) => {
               if (
                 skill.technology === "Express" ||
